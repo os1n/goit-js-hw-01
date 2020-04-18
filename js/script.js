@@ -5,7 +5,7 @@
 // ====---- Task 01 Start
 console.log('MAIN PAGE');
 
-alert('You are visiting a land page. Please follow the links to review all tasks!')
+console.log('You are visiting a land page. Please follow the links to review all tasks!');
   
 //   console.log(passCheck);
   
