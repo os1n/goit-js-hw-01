@@ -1,105 +1,44 @@
-/* eslint-disable no-console */
-// eslint-disable prefer-const
-// eslint-disable no-unused-vars
+// Напиши скрипт который просит посетителя ввести число в prompt до тех пор, пока посетитель на нажмет Cancel и каждый раз добавляет введенное значение к общей сумме.
 
-// ====---- Task 01 Start
-console.log('TASK 01');
+//     При загрузке страницы пользователю предлагается в prompt ввести число. Ввод добавляется к значению переменной total.
+//     Операция ввода числа продолжается до тех пор, пока пользователь не нажмет кнопку Cancel в prompt.
+//     После того как пользователь прекратил ввод нажав кнопку Cancel, показать alert со строкой 'Общая сумма чисел равна [сумма]'.
 
-let name = 'Генератор защитного поля ';
-let price = 1000;
+//     bell Делать проверку того, что пользователь ввел именно число, а не произвольный набор символов, не нужно. Если хочешь, в случае некорректного ввода, показывай alert с текстом 'Было введено не число, попробуйте еще раз', при этом результат prompt плюсовать к общей сумме не нужно, после чего снова пользователю предлагается ввести число в prompt.
 
-console.log(
-  'Выбран «Генератор защитного поля», цена за штуку',
-  price,
-  ' кредитов'
-);
+// let input;
+// let total = 0;
 
-price = 2000;
+// ====---- Task 06 Start
+console.log("TASK 06");
 
-console.log(
-  'Выбран «Генератор защитного поля», цена за штуку',
-  price,
-  ' кредитов'
-);
+let input = 0;
+let inputN;
+let total = 0;
 
-// ====---- Task 02 Start
-console.log('TASK 02');
+while (input !== null) {
+  input = prompt(`Введите число. Для отмены нажимет ESC.`);
+  console.log(input);
+  console.log(typeof input);
 
-const totalNumber = 100;
-const orderedNumber = 80;
+  inputN = Number(input);
+  console.log(inputN);
+  console.log(typeof inputN);
+  console.log(Number.isNaN(inputN));
 
-console.log('Кол-во товаров на складе', totalNumber);
-console.log('Кол-во товаров в закзае', orderedNumber);
+  //total += Number(input);
 
-console.log(
-  totalNumber > orderedNumber
-    ? 'Заказ оформлен, с вами свяжется менеджер'
-    : 'На складе недостаточно твоаров'
-);
-
-// ====---- Task 03 Start
-console.log('TASK 03');
-
-const ADMIN_PASSWORD = 'SOS-all';
-let message = 'all right';
-let passCheck = prompt("Enter password:");
-
-switch (passCheck) {
-  case null:
-    message = "Отменено пользователем!";
-    break;
-
-  case ADMIN_PASSWORD:
-    message = "Добро пожаловать!";
-    break;
-
-  default:
-    message = "Доступ запрещен, неверный пароль!";
-    break;
+  if (!Number.isNaN(inputN)) {
+    total += Number(input);
+    console.log(Number(input));
+    // console.log(typeof Number(input));
+    // console.log(Number.isNaN(input));
+  } else {
+    console.log(`Введено неправильный тип данных`);
+    alert(`Введено неправильный тип данных`);
+    // break;
+  }
 }
 
-console.log(passCheck);
-
-alert(message);
-
-// ====---- Task 04 Start
-console.log("TASK 04");
-
-// На счету пользователя есть 23580 кредитов, значение хранится в переменной credits (создай и присвой). Пользователь решает купить ремонтных дроидов, которые стоят по 3000 кредитов за штуку. Цена одного дроида хранится в переменной pricePerDroid (создай и присвой).
-// При посещении страницы, используя prompt, необходимо спросить количество дроидов которые пользователь хочет купить и сохранить в переменную.
-// Напиши скрипт который:
-//     Если в prompt была нажата кнопка Cancel, выводит в консоль сообщение 'Отменено пользователем!'.
-//     В противном случае, рассчитывает общую цену заказа и сохраняет в переменной totalPrice.
-//     Проверяет сможет ли пользователь оплатить заказ:
-//         если сумма к оплате превышает количество кредитов на счету, выводи в консоль сообщение 'Недостаточно средств на счету!'.
-//         в противном случае необходимо посчитать остаток кредитов на счету и вывести сообщение 'Вы купили [число] дроидов, на счету осталось [число] кредитов.'.
-
-let credits = 23580;
-const pricePerDroid = 3000;
-let droidNumber = prompt("Какое количество дроидов хотите купить?");
-let serverRespond;
-let totalPrice = 0;
-
-switch (droidNumber) {
-    case null:
-        serverRespond = "Отменено пользователем!";
-        alert(serverRespond);
-      break;
-
-    // case :
-    //     serverRespond = "Введено недопустимое число!";
-    //   break;
-  
-    default:
-        totalPrice = droidNumber * pricePerDroid;
-        serverRespond = 'Вы купили ${droidNumber} дроидов, на счету осталось ${credits - totalPrice} кредитов.';
-        alert(totalPrice > credits ? 
-            'Недостаточно средств на счету!' :
-            serverRespond);
-      break;
-  }
-  
-//   console.log(passCheck);
-  
-  
-
+alert(`Общая сумма чисел равна ${total}`);
+console.log(total);

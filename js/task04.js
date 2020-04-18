@@ -29,15 +29,9 @@ switch (droidNumber) {
 
   default:
     totalPrice = droidNumber * pricePerDroid;
-    const serverRespond1 = `Вы купили ${droidNumber} дроидов, на счету осталось ${
-      credits - totalPrice
-    } кредитов`;
+    const serverRespond1 = `Вы купили ${droidNumber} дроидов, на счету осталось ${credits - totalPrice} кредитов`;
     console.log(serverRespond1);
-
-    const serverRespond2 =
-      'Вы купили ${droidNumber} дроидов, на счету осталось ${credits - totalPrice} кредитов.';
-    console.log(serverRespond2);
-
+    
     alert(
       totalPrice > credits ? 'Недостаточно средств на счету!' : serverRespond1
     );
