@@ -5,7 +5,7 @@
 // ====---- Task 03 Start
 console.log('TASK 03');
 
-const ADMIN_PASSWORD = 'SOS-all';
+const ADMIN_PASSWORD = 'jqueryismyjam';
 let message = 'all right';
 let passCheck = prompt("Enter password:");
 
