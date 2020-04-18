@@ -1,10 +1,13 @@
-let name = 'Генератор защитного поля ';
-let price = 1000;
+/* eslint-disable no-console */
+// eslint-disable prefer-const
+// eslint-disable no-unused-vars
 
-console.log('Выбран «Генератор защитного поля», цена за штуку', price,  ' кредитов');
+// ====---- Task 01 Start
+console.log('MAIN PAGE');
 
-price = 2000;
-
-console.log('Выбран «Генератор защитного поля», цена за штуку', price,  ' кредитов');
-
+alert('You are visiting a land page. Please follow the links to review all tasks!')
+  
+//   console.log(passCheck);
+  
+  
 
